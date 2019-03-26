@@ -1,0 +1,9 @@
+export const FETCH_WEATHER = "COMMAND/FETCH_WEATHER_FOR_LAT_LNG";
+export const API_ERROR = "EVENT/API_ERROR_RECEIVED";
+export const WEATHER_DATA_RECEIVED = "EVENT/WEATHER_DATA_RECEIVED";
+export const WEATHER_ID_RECEIVED = "EVENT/WEATHER_ID_RECEIVED";
+
+export const DATA_FROM_DRONE = "EVENT/DATA_FROM_DRONE";  //get data from the drone
+export const UPDATE_DATA = "COMMAND/UPDATE_DATA";        
+export const DATA_RECEIVED = "EVENT/DATA_RECEIVED";      //data received from the API
+
