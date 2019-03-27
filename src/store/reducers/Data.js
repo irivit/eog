@@ -4,21 +4,28 @@ const initialState = {
   droneInfo: [],
   lastPosition: [],
   lastUoM: 'temperature - fahrenheit',
-  lastTemp: 0,
-  lastTimestamp:  new Date(),
+  lastTemperature: 0,
+  lastTimestamp: new Date(),
   lastAccuracy: 0
 };
 
+
 const updateData = (state, action) => {
-   let { data } = action.data;
-   let latestData = droneInfo.data.reduce((accur, dat) => {
-    if (dat.timestamp >= accur.timestamp) {
-      return dat;
-    }
-    else {
-      return accur;
-    }
-  });
+  let droneInfo = action.data;
+  // console.log(JSON.stringify(droneInfo));
+  let latestData = droneInfo.data[374];
+  console.log("lastest data"+JSON.stringify(latestData)+" "+droneInfo.data.length);
+  console.log("state"+JSON.stringify(state));
+  //  let latestData = droneInfo.data.reduce((accur, dat) => {
+  //   if (dat.timestamp >= accur.timestamp) {
+  //     return dat;
+  //   }
+  //   else {
+  //     return accur;
+
+  //   }
+  // });
+  
   return {
     ...state,
     droneInfo: action.data, 
@@ -30,12 +37,12 @@ const updateData = (state, action) => {
 }
 
 const handlers = {
-    [actions.UPDATE_DATA]: updateData
+  [actions.UPDATE_DATA]: updateData
 };
 
 export default (state = initialState, action) => {
-    const handler = handlers[action.type];
-    if (typeof handler === "undefined") return state;
-    return handler(state, action);
+  const handler = handlers[action.type];
+  if (typeof handler === "undefined") return state;
+  return handler(state, action);
 };
 

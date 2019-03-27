@@ -8,7 +8,6 @@ const getData = async () => {
       return { error: { code: response.status } };
     }
     const json = await response.json();
-    console.log(json);
     return { data: json };
   };
   
