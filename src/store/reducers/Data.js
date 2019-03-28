@@ -9,7 +9,7 @@ const initialState = {
   lastAccuracy: 0
 };
 
-
+//Updating the info from the drone with the lastest data
 const updateData = (state, action) => {
   let droneInfo = action.data;
   let index = droneInfo.data.length -1;

@@ -104,8 +104,7 @@ class Drone extends Component {
                                     <AppBar position="static">
                                         <Tabs variant="fullWidth" value={value} onChange={this.handleChange} centered>
                                             <LinkTab label="Numeric" href="page1" />
-                                            <LinkTab label="Map" href="page2" />
-                                            <LinkTab label="Graphic" href="page3" />
+                                            <LinkTab label="Graphic" href="page2" />
                                         </Tabs>
                                     </AppBar>
                                     {value === 0 && <TabContainer>
@@ -134,15 +133,10 @@ class Drone extends Component {
                                                 </Avatar>
                                                 <ListItemText primary="Last Received:" secondary={`${Math.round(
                                                     (lastTimestamp) / 1000)} seconds ago`} />
-                                                {/* secondary={`${Math.round(
-                                                    (Date.now() - lastTimestamp) / 1000)} seconds ago`} /> */}
                                             </ListItem>
                                         </List>
                                     </TabContainer>}
                                     {value === 1 && <TabContainer>
-                                        {/* <Graphic /> */}
-                                    </TabContainer>}
-                                    {value === 2 && <TabContainer>
                                         <Graphic />
                                     </TabContainer>}
                                 </div>

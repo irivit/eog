@@ -7,7 +7,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
-// import DisplayInfo from "./components/DisplayInfo";
 import Drone from "./components/Drone";
 
 
@@ -36,8 +35,7 @@ const App = props => (
     <Provider store={store}>
       <Wrapper>
         <Header />
-        {/* <DisplayInfo /> */}
-        <Drone/>
+        <Drone />
         <ToastContainer />
       </Wrapper>
     </Provider>
