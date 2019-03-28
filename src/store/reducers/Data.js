@@ -6,7 +6,8 @@ const initialState = {
   lastUoM: 'temperature - fahrenheit',
   lastTemperature: 0,
   lastTimestamp: new Date(),
-  lastAccuracy: 0
+  lastAccuracy: 0,
+  secAgo: 0
 };
 
 //Updating the info from the drone with the lastest data
@@ -21,6 +22,7 @@ const updateData = (state, action) => {
     lastUoM: latestData.uom,
     lastTemperature: latestData.metric,
     lastTimestamp: latestData.timestamp,
+    secAgo: Math.round(( Date.now() - latestData.timestamp) / 1000)
    }
 }
 
