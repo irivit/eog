@@ -25,6 +25,8 @@ import Time from '@material-ui/icons/AvTimer';
 
 import * as actions from '../store/actions';
 
+import Graphic from './Chart';
+
 
 const cardStyles = theme => ({
     root: {
@@ -131,14 +133,18 @@ class Drone extends Component {
                                                     <Time />
                                                 </Avatar>
                                                 <ListItemText primary="Last Received:" secondary={`${Math.round(
-                                                    ( lastTimestamp) / 1000)} seconds ago`} />
-                                                    {/* secondary={`${Math.round(
+                                                    (lastTimestamp) / 1000)} seconds ago`} />
+                                                {/* secondary={`${Math.round(
                                                     (Date.now() - lastTimestamp) / 1000)} seconds ago`} /> */}
                                             </ListItem>
                                         </List>
-                                        </TabContainer>}
-                                    {value === 1 && <TabContainer>Page Two</TabContainer>}
-                                    {value === 2 && <TabContainer>Page Three</TabContainer>}
+                                    </TabContainer>}
+                                    {value === 1 && <TabContainer>
+                                        {/* <Graphic /> */}
+                                    </TabContainer>}
+                                    {value === 2 && <TabContainer>
+                                        <Graphic />
+                                    </TabContainer>}
                                 </div>
                             </NoSsr>
                         </CardContent>

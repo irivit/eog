@@ -42,7 +42,6 @@ function* getDataFromDrone(){
  */
 function* watchUpdate(action) {
     const { data } = action;
-    // console.log("update watcher"+JSON.stringify(data));
     yield put({ type : actions.UPDATE_DATA, data})
 }
 

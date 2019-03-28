@@ -12,20 +12,8 @@ const initialState = {
 
 const updateData = (state, action) => {
   let droneInfo = action.data;
-  // console.log(JSON.stringify(droneInfo));
-  let latestData = droneInfo.data[374];
-  console.log("lastest data"+JSON.stringify(latestData)+" "+droneInfo.data.length);
-  console.log("state"+JSON.stringify(state));
-  //  let latestData = droneInfo.data.reduce((accur, dat) => {
-  //   if (dat.timestamp >= accur.timestamp) {
-  //     return dat;
-  //   }
-  //   else {
-  //     return accur;
-
-  //   }
-  // });
-  
+  let index = droneInfo.data.length -1;
+  let latestData = droneInfo.data[index];
   return {
     ...state,
     droneInfo: action.data, 
