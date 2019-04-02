@@ -1,3 +1,5 @@
-## Create React App Visualization
+## Data visualization using React, Redux and Redux-Saga.
 
-Read more about this assessment here
+Runing on Local Machine:
+
+Clone the repository and run either yarn install && start or npm install && npm start in the root directory.
